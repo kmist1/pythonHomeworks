@@ -95,7 +95,7 @@ def findLogic(query):
         return "OR"
     else: return "there is no logic"
 
-'''******************************* Method for OR Operation *********************************'''
+'''******************************* Method for AND Operation *********************************'''
 
 def andSearch(data_list, querySet):
     word1, word2 = querySet
@@ -108,7 +108,7 @@ def andSearch(data_list, querySet):
 
 
 
-'''******************************* Method for AND Operation *********************************'''
+'''******************************* Method for OR Operation *********************************'''
 def orSearch(data_list, querySet):
 
     for i,quote in enumerate(data_list):
