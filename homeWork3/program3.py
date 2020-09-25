@@ -108,7 +108,7 @@ def andSearch(data_list, querySet):
 
 
 
-'''******************************* Method for OR Operation *********************************'''
+'''******************************* Method for AND Operation *********************************'''
 def orSearch(data_list, querySet):
 
     for i,quote in enumerate(data_list):
