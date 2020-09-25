@@ -1,7 +1,7 @@
 # Quote Search Program
 # By Krunal Mistry
 # 09/24/2020
-import re
+
 
 data_list = ["And now here is my secret, a very simple secret: It is only with the heart that one can see rightly; what is essential is invisible to the eye.",
 "All grown-ups were once children... but only few of them remember it.",
@@ -95,6 +95,18 @@ def findLogic(query):
         return "OR"
     else: return "there is no logic"
 
+'''******************************* Method for OR Operation *********************************'''
+
+def andSearch(data_list, querySet):
+    word1, word2 = querySet
+    print(word1,word2)
+    for i,quote in enumerate(data_list):
+        found_at1 = quote.find(word1)
+        found_at2 = quote.find(word2)
+        if (found_at1 >= 0 and found_at2 >= 0):
+            print("Found at ", i, "..." + quote[found_at1:found_at1 + 50] + quote[found_at2:found_at2 + 50], "...")
+
+
 
 '''******************************* Method for OR Operation *********************************'''
 def orSearch(data_list, querySet):
@@ -113,12 +125,14 @@ def quoteSearch(data_list,logic, query):
         querySet.remove("and")
         if("or" in querySet): querySet.remove("or")
         print("Performing AND search for: ",querySet)
+        andSearch(data_list,querySet)
 
     elif(logic == "OR"):
         querySet = {x for x in query.split(' ')}
         querySet.remove("or")
         print("Performing OR search for: ", querySet)
         orSearch(data_list, querySet)
+
     else: print("perform logic query only")
 
 
@@ -129,7 +143,3 @@ print(logic)
 quoteSearch(data_list,logic,query)
 
 
-# for i,quote in enumerate(data_list):
-# 	found_at = quote.find(query)
-# 	if( found_at >= 0):
-# 		print("Found at ", i, "..."+quote[found_at:found_at+50], "...")
