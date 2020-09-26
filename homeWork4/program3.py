@@ -99,7 +99,6 @@ def findLogic(query):
 
 def andSearch(data_list, querySet):
     word1, word2 = querySet
-    print(word1,word2)
     for i,quote in enumerate(data_list):
         found_at1 = quote.find(word1)
         found_at2 = quote.find(word2)
@@ -133,13 +132,13 @@ def quoteSearch(data_list,logic, query):
         print("Performing OR search for: ", querySet)
         orSearch(data_list, querySet)
 
-    else: print("perform logic query only")
-
+    else:
+        querySet = {x for x in set(query.split(' '))}
+        print("Performing AND Search for: ", querySet)
+        andSearch(data_list, querySet)
 
 query=input("query:")
-print(query)
 logic = findLogic(query)
-print(logic)
 quoteSearch(data_list,logic,query)
 
 
