@@ -12,7 +12,7 @@ def fileDirExists(fileName):
 
 path = input("Please Enter Name of File, Directory or path: ")
 
-while(isExists):
+while isExists:
     print(fileDirExists(path))
     isExists = fileDirExists(path)
 
