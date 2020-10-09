@@ -1,0 +1,34 @@
+
+.container1{
+    background-color:whitesmoke;
+    scroll-margin: 2rem;
+    overflow: scroll;
+}
+
+.iconbutton{
+    justify-content: right;
+    
+}
+.nav{
+    display: flex;
+    justify-content: center;
+    background-color:#09191f;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .nav{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        background-color:#09191f;
+    }
+  }
+
+.footer{
+    text-align: center;
+    padding: 15px;
+    background-color: #0e232b;
+    color: whitesmoke;
+}
+

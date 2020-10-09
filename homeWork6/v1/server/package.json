@@ -1,0 +1,28 @@
+{
+  "name": "portfolio",
+  "version": "0.0.1",
+  "private": true,
+  "main": "index.js",
+  "dependencies": {
+    "ejs": "latest",
+    "aws-sdk": "latest",
+    "express": "latest",
+    "body-parser": "latest",
+    "chai": "latest",
+    "mocha": "latest",
+    "mongoose": "latest",
+    "node": "latest",
+    "path": "latest",
+    "supertest": "latest",
+    "supertext": "latest"
+  },
+  "engines": {
+    "node": "12.16.1"
+  },
+  "scripts": {
+    "start": "node ./src/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:prod": "NODE_ENV=production node ./src/server.js",
+    "eb:prod": "npm run build && npm run start:prod"
+  }
+}
